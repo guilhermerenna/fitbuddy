@@ -1,8 +1,12 @@
 import { useState } from "react"
 import "./App.css"
+import WorkoutForm from "./components/WorkoutForm"
+import WorkoutHistory from "./components/WorkoutHistory"
 
 function App() {
-  const [activePage, setActivePage] = useState<"dashboard" | "nutrition" | "fitness" | "sleep" | "trends" | "settings">("dashboard")
+  const [activePage, setActivePage] = useState<
+    "dashboard" | "nutrition" | "fitness" | "sleep" | "trends" | "settings"
+  >("dashboard")
 
   const renderPage = () => {
     switch (activePage) {
@@ -11,7 +15,12 @@ function App() {
       case "nutrition":
         return <h2>🥗 Nutrition</h2>
       case "fitness":
-        return <h2>💪 Fitness</h2>
+        return (
+          <div className="fitnessPage">
+            <WorkoutForm />
+            <WorkoutHistory />
+          </div>
+        )
       case "sleep":
         return <h2>😴 Sleep & Recovery</h2>
       case "trends":
@@ -29,9 +38,7 @@ function App() {
         <h1>FitBuddy</h1>
       </header>
 
-      <main className="app-main">
-        {renderPage()}
-      </main>
+      <main className="app-main">{renderPage()}</main>
 
       <nav className="app-nav">
         <button onClick={() => setActivePage("dashboard")}>🏠</button>

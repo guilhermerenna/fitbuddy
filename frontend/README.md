@@ -1,7 +1,9 @@
 # FitBuddy 🏋️‍♂️🥗😴  
 
 **FitBuddy** is a personal health and longevity tracker built with React + TypeScript.  
-It helps you log and visualize key factors that influence **lifespan and healthspan** — including nutrition, workouts, sleep, fasting, and lifestyle habits.  
+It helps you log and visualize key factors that influence **lifespan and healthspan** — including nutrition, workouts, sleep, fasting, and lifestyle habits.
+
+It currently stores all the data in the browser Local Storage, but can be easily modified to use APIs instead, and leverage backend storage.
 
 ---
 
@@ -28,7 +30,7 @@ It helps you log and visualize key factors that influence **lifespan and healths
 
 - [React](https://react.dev/) (with TypeScript)  
 - [Vite](https://vitejs.dev/) (fast build tool)  
-- LocalStorage (initial data persistence, backend-ready)  
+- LocalStorage (initial data persistence, backend-ready)
 
 ---
 
